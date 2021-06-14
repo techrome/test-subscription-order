@@ -126,7 +126,7 @@ const Step1 = ({
   };
 
   useEffect(() => {
-    if (subscriptionPlans.length > 0) {
+    if (subscriptionPlans.length > 0 && isEmpty(stepsData[0])) {
       setValues({ ...values, [c.duration]: 12 });
     }
   }, [subscriptionPlans]);
